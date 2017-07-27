@@ -11,15 +11,15 @@
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
 
     <!-- Vendor styles -->
-    <link rel="stylesheet" href="assets/vendor/fontawesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="assets/vendor/metisMenu/dist/metisMenu.css"/>
-    <link rel="stylesheet" href="assets/vendor/animate.css/animate.css"/>
-    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/vendor/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/vendor/metisMenu/dist/metisMenu.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/vendor/bootstrap/dist/css/bootstrap.css"/>
 
     <!-- App styles -->
-    <link rel="stylesheet" href="assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"/>
-    <link rel="stylesheet" href="assets/fonts/pe-icon-7-stroke/css/helper.css"/>
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="/building-admin-app/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/fonts/pe-icon-7-stroke/css/helper.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/styles/style.css">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -170,10 +170,10 @@
     </div>
 
     <!-- Vendor scripts -->
-    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendor/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/vendor/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="/building-admin-app/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/building-admin-app/assets/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="/building-admin-app/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/building-admin-app/assets/vendor/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- App scripts -->
 
