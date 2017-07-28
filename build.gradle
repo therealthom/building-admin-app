@@ -27,7 +27,11 @@ repositories {
 }
 
 dependencies {
+
     compile "org.springframework.boot:spring-boot-starter-logging"
+
+    compile "org.codehaus.groovy:groovy-sql:2.4.10"
+
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
     compile "org.springframework.boot:spring-boot-starter-actuator"
