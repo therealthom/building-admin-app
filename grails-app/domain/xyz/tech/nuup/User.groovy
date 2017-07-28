@@ -31,4 +31,8 @@ class User implements Serializable {
 	    password column: '`password`'
         table '`user`'
     }
+
+    String toString() {
+        username
+    }
 }

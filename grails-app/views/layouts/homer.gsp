@@ -125,13 +125,28 @@
 
             <ul class="nav" id="side-menu">
                 <li class="active">
-                    <a href="index.html"><span class="nav-label">Page 1</span> <span
-                            class="label label-success pull-right">start</span></a>
+                <li><g:link controller="main">Inicio</g:link></li>
                 </li>
                 <li>
-                    <a href="page2.html"><span class="nav-label">Page 2</span></a>
+                    <a href="#"><span class="nav-label">Administración</span><span class="fa arrow"></span> </a>
+                    <ul class="nav nav-second-level">
+                        <li><g:link controller="unidad">Unidades</g:link></li>
+                        <li><g:link controller="construccion">Construcciones</g:link></li>
+                        <li><g:link controller="persona">Personas</g:link></li>
+                        <li><g:link controller="titularDeConstruccion">Titular de la Construcción</g:link></li>
+                        <li><g:link controller="ingresoPorConstruccion">Ingreso por Construcción</g:link></li>
+                        <li><g:link controller="egresoPorUnidad">Egreso por Unidad</g:link></li>
+                    </ul>
                 </li>
-
+                <li>
+                    <a href="#"><span class="nav-label">Catálogos</span><span class="fa arrow"></span> </a>
+                    <ul class="nav nav-second-level">
+                        <li><g:link controller="tipoDeUnidad">Tipo de Unidad</g:link></li>
+                        <li><g:link controller="tipoDeConstruccion">Tipo de Construcción</g:link></li>
+                        <li><g:link controller="tipoDeIngreso">Tipo de Ingreso</g:link></li>
+                        <li><g:link controller="tipoDeEgreso">Tipo de Egreso</g:link></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </aside>
