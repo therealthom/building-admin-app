@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     <!-- Page title -->
-    <title>HOMER | WebApp admin theme</title>
+    <title>WebApp admin</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
@@ -33,7 +33,7 @@
     <div class="splash">
         <div class="color-line"></div>
         <div class="splash-title">
-            <h1>Homer - Responsive Admin Theme</h1>
+            <h1>Responsive Admin Theme</h1>
             <p>Special AngularJS Admin Theme for small and medium webapp with very clean and aesthetic style and feel.</p>
             <div class="spinner">
                 <div class="rect1"></div>
@@ -163,7 +163,7 @@
                                 <a class="showhide"><i class="fa fa-chevron-up"></i></a>
                                 <a class="closebox"><i class="fa fa-times"></i></a>
                             </div>
-                            Title
+                            Bienvenido al Sistema de Administración de Gastos
                         </div>
 
                         <div class="panel-body">
@@ -189,10 +189,53 @@
     <script src="/building-admin-app/assets/vendor/slimScroll/jquery.slimscroll.min.js"></script>
     <script src="/building-admin-app/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/building-admin-app/assets/vendor/metisMenu/dist/metisMenu.min.js"></script>
-
+    <script src="/building-admin-app/assets/vendor/chartjs/Chart.min.js"></script>
     <!-- App scripts -->
 
     <asset:javascript src="homer.js"/>
 
+    <script>
+        //var $ = jQuery;
+        $(function () {
+            /**
+             * Options for Bar chart
+             */
+            var barOptions = {
+                responsive: true
+            };
+
+            /**
+             * Data for Bar chart
+             */
+            var barData = {
+                labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                datasets: [
+                    {
+                        label: "Ingresos",
+                        backgroundColor: "rgba(220,220,220,0.5)",
+                        borderColor: "rgba(220,220,220,0.8)",
+                        highlightFill: "rgba(220,220,220,0.75)",
+                        highlightStroke: "rgba(220,220,220,1)",
+                        borderWidth: 1,
+                        //data: [65, 59, 80, 81, 56, 55, 40, 12, 43, 12, 43, 12]
+                        data: ${ingresosJSON}
+                    },
+                    {
+                        label: "Egresos",
+                        backgroundColor: "rgba(98,203,49,0.5)",
+                        borderColor: "rgba(98,203,49,0.8)",
+                        highlightFill: "rgba(98,203,49,0.75)",
+                        highlightStroke: "rgba(98,203,49,1)",
+                        borderWidth: 1,
+                        //data: [28, 48, 40, 19, 86, 27, 90, 56, 34, 54, 12, 65]
+                        data: ${egresosJSON}
+                    }
+                ]
+            };
+
+            var ctx = document.getElementById("barOptions").getContext("2d");
+            new Chart(ctx, {type: 'bar', data: barData, options: barOptions});
+        });
+    </script>
 </body>
 </html>
