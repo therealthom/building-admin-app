@@ -9,24 +9,25 @@
         <a class="btn btn-outline btn-info" href="\${createLink(uri: '/')}"><g:message code="default.home.label"/></a>
         <g:link class="btn btn-outline btn-info" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
 
-        <div id="create-${propertyName}" class="content scaffold-create" role="main">
+        <div id="create-${propertyName}" class="form-horizontal" role="main">
+                
             <h1><g:message code="default.create.label" args="[entityName]" /></h1>
             <g:if test="\${flash.message}">
             <div class="message" role="status">\${flash.message}</div>
             </g:if>
             <g:hasErrors bean="\${this.${propertyName}}">
-            <ul class="errors" role="alert">
+            <ul class="errors alert alert-warning"  role="alert">
                 <g:eachError bean="\${this.${propertyName}}" var="error">
                 <li <g:if test="\${error in org.springframework.validation.FieldError}">data-field-id="\${error.field}"</g:if>><g:message error="\${error}"/></li>
                 </g:eachError>
             </ul>
-            </g:hasErrors>
+            </g:hasErrors> </br>
             <g:form resource="\${this.${propertyName}}" method="POST">
                 <fieldset class="form">
                     <f:all bean="${propertyName}"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="btn btn-outline btn-info" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
+                    <g:submitButton name="create" class="btn btn-outline btn-info center-block" value="\${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>
         </div>

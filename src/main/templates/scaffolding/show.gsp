@@ -10,7 +10,7 @@
         <g:link class="btn btn-outline btn-info" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
         <g:link class="btn btn-outline btn-info" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
 
-        <div id="show-${propertyName}" class="content scaffold-show" role="main">
+        <div id="show-${propertyName}" class="table-condensed" role="main">
             <h1><g:message code="default.show.label" args="[entityName]" /></h1>
             <g:if test="\${flash.message}">
             <div class="message" role="status">\${flash.message}</div>
@@ -19,7 +19,33 @@
             <g:form resource="\${this.${propertyName}}" method="DELETE">
                 <fieldset class="buttons">
                     <g:link class="btn btn-outline btn-info" action="edit" resource="\${this.${propertyName}}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-                    <input class="btn btn-outline btn-danger" type="submit" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                    <input class="btn btn-outline btn-danger" type="button" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" 
+                        onclick="
+                            swal({   
+                                title: '¿Está usted seguro?',
+                                text: '¡No podremos recuperar este archivo!',
+                                type: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#DD6B55',
+                                confirmButtonText: ' Sí, eliminar!',
+                                closeOnConfirm: false,
+                                closeOnConfirm: false 
+                            },
+                            function(isConfirm) {
+                                if (isConfirm) {
+                                    swal(' Deleted!', ' Su archivo se ha eliminado.', ' success');
+                                } else  {
+                                    swal(' Cancelled!', 'Su archivo es seguro', ' error',);
+                                    
+                                }
+                            }); 
+
+                            return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');
+
+                      "/>
+                      
+
+
                 </fieldset>
             </g:form>
         </div>
