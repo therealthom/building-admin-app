@@ -75,7 +75,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Contraseña" name="${passwordParameter ?: 'password'}" id="password">
                         </div>
-                        <button type="submit" class="btn btn-primary block full-width m-b"
+                        <button type="submit" class="btn btn-primary block full-width m-b center-block"
                                 value="${message(code: 'springSecurity.login.button')}">Ingresar</button>
                     </form>
 
@@ -86,7 +86,7 @@
 
     <div class="row">
         <div class="col-md-12 text-center">
-            <strong>HOMER</strong> - AngularJS Responsive WebApp <br/> 2015 Copyright Company Name
+            <strong>Nuuptech</strong> - Sistema de Administración de Gastos  <br/> 2017 Copyright 
         </div>
     </div>
 </div>

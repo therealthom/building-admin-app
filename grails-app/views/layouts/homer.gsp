@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="/building-admin-app/assets/vendor/metisMenu/dist/metisMenu.css"/>
     <link rel="stylesheet" href="/building-admin-app/assets/vendor/animate.css/animate.css"/>
     <link rel="stylesheet" href="/building-admin-app/assets/vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/building-admin-app/assets/vendor/sweetalert/lib/sweet-alert.css"/>
+   
 
     <!-- App styles -->
+
     <link rel="stylesheet" href="/building-admin-app/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"/>
     <link rel="stylesheet" href="/building-admin-app/assets/fonts/pe-icon-7-stroke/css/helper.css"/>
     <link rel="stylesheet" href="/building-admin-app/assets/styles/style.css">
+    <link rel="stylesheet" href="/building-admin-app/assets/styles/static_custom.css">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -56,7 +60,7 @@
 
         <div id="logo" class="light-version">
             <span>
-                APP NAME
+                Nuuptech
             </span>
         </div>
         <nav role="navigation">
@@ -106,6 +110,9 @@
     <aside id="menu">
         <div id="navigation">
             <div class="profile-picture">
+                    <a href="/building-admin-app/assets/homer/images/logoweb.png">
+                        <img src="images/profile.jpg" class="img-circle m-b" alt="logo">
+                    </a>
 
                 <div class="stats-label text-color">
                     <span class="font-extra-bold font-uppercase">Username</span>
@@ -177,9 +184,9 @@
         <!-- Footer-->
         <footer class="footer">
             <span class="pull-right">
-                Example text
+               Sistema de Administración de Gastos 
             </span>
-            Company 2016
+            Nuuptech 2017
         </footer>
 
     </div>
@@ -190,6 +197,9 @@
     <script src="/building-admin-app/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/building-admin-app/assets/vendor/metisMenu/dist/metisMenu.min.js"></script>
     <script src="/building-admin-app/assets/vendor/chartjs/Chart.min.js"></script>
+    <script src="/building-admin-app/assets/vendor/sweetalert/lib/sweet-alert.min.js"></script>
+
+    
     <!-- App scripts -->
 
     <asset:javascript src="homer.js"/>
@@ -236,6 +246,12 @@
             var ctx = document.getElementById("barOptions").getContext("2d");
             new Chart(ctx, {type: 'bar', data: barData, options: barOptions});
         });
+
+      
+           
+
+
+   
     </script>
 </body>
 </html>
